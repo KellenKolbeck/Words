@@ -43,8 +43,11 @@ describe(Words) do
   end
 end
 
-  # describe('#save_definition') do
-  #   it('saves the definition for a word') do
-
-  #   end
-  # end
+  describe('#save_definition') do
+    it('saves the definition for a word') do
+      test_word = Words.new("mountain")
+      new_definition = Definitions.new('A mountain is a large landform that stretches above the surrounding land in a limited area, usually in the form of a peak.')
+      test_word.save_definition(new_definition)
+      expect(test_word.show_word()).to(eq([test_word]))
+    end
+  end

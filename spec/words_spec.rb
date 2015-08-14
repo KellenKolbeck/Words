@@ -15,4 +15,11 @@ describe(Words) do
       expect(Words.all()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('saves the words') do
+      test_word = Words.new("mountain")
+      expect(test_word.save()).to(eq([test_word]))
+    end
+  end
 end

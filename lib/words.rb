@@ -4,7 +4,6 @@ class Words
 
   define_method(:initialize) do |word|
     @word = word
-
   end
 
   define_method(:word) do
@@ -13,6 +12,10 @@ class Words
 
   define_singleton_method(:all) do
     @@word_list
+  end
+
+  define_method(:save) do
+    @@word_list.push(self)
   end
 
 

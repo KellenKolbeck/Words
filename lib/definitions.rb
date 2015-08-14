@@ -15,6 +15,10 @@ class Definitions
     @@definition_list
   end
 
+  define_method(:save) do
+    @@definition_list.push(self)
+  end
+
 
 
 

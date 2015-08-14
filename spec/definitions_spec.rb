@@ -21,4 +21,12 @@ describe(Definitions) do
       expect(Definitions.all()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('saves all definitions of words') do
+      test_definition = Definitions.new('A mountain is a large landform that stretches above the surrounding land in a limited area, usually in the form of a peak.')
+      test_definition.save()
+      expect(Definitions.all()).to(eq([test_definition]))
+    end
+  end
 end

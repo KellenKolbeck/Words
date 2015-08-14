@@ -5,7 +5,7 @@
 <% end %>
 
 <ul>
-  <% @list_of_words.each do |new_word| %>
+  <% @list_of_words.each() do |new_word| %>
   <li><a href="/new_word/<%= new_word.id %>"><%= new_word.word %></a></li>
   <% end %>
 </ul>

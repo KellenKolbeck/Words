@@ -4,6 +4,7 @@ class Words
 
   define_method(:initialize) do |word|
     @word = word
+    @word_array = []
     @id = @@word_list.length() + 1
   end
 
@@ -25,6 +26,14 @@ class Words
 
   define_method(:id) do
     @id
+  end
+
+  define_method(:save_definition) do |definition|
+    @word_array.push(definition)
+  end
+
+  define_method(:show_word) do
+    @word_array
   end
 
   define_singleton_method(:find) do |id|

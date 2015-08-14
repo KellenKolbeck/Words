@@ -1,6 +1,6 @@
 require('rspec')
 require('words')
-# require('definitions')
+require('definitions')
 
 describe(Words) do
   describe('#word') do
@@ -23,7 +23,6 @@ describe(Words) do
     end
   end
 
-
   describe('.clear') do
     it('clears the words out of the array after each spec run') do
       test_word = Words.new("mountain")
@@ -32,4 +31,10 @@ describe(Words) do
       expect(Words.all()).to(eq([]))
     end
   end
+
+  # describe('#save_definition') do
+  #   it('saves the definition for a word') do
+
+  #   end
+  # end
 end

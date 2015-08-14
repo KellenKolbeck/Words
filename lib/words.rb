@@ -22,5 +22,7 @@ class Words
     @@word_list = []
   end
 
+  # define_method(:)
+
 
 end

@@ -5,7 +5,7 @@
 <% end %>
 
 <ul>
-  <% @list_of_words.each() do |new_word| %>
+  <% @list_of_words.each do |new_word| %>
   <li><a href="/new_word/<%= new_word.id %>"><%= new_word.word %></a></li>
   <% end %>
 </ul>
@@ -13,6 +13,6 @@
 <form action="/new_word" method="post">
   <div class="form-group">
     <input name="new_word" id="new_word" type="text" class="form-control" placeholder="ex. mountain">
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn-danger">Submit</button>
   </div>
 </form>

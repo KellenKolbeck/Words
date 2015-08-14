@@ -28,8 +28,8 @@ end
 
 post('/definitions') do
   first_definition = params.fetch('first_definition')
-  @first_definition = Definitions.new(first_definition)
-  @first_definition.save()
+  @new_definition = Definitions.new(first_definition)
+  @new_definition.save()
   @word = Words.find(params.fetch('new_word_id'))
   @word.save_definition(@first_definition)
   erb(:definitions)

@@ -1,0 +1,12 @@
+<h1><%= @list_of_words.word() %></h1>
+
+<ul>
+  <% @dealership.show_vehicles().each() do |cars| %>
+  <li><%= cars.unique_vehicle() %></li>
+  <% end %>
+</ul>
+
+<h3>Add a new vehicle</h3>
+<form action="/vehicles" method="post">
+  <input id="dealership_id" name="dealership_id" type="hidden" value="<%= @dealership.id() %>">
+  <select name="make" class="form-control">

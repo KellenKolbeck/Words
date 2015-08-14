@@ -11,7 +11,6 @@ end
 
 get('/new_word') do
   @words = Words.all()
-  erb(:new_word)
 end
 
 post('/new_word') do
@@ -20,4 +19,8 @@ post('/new_word') do
   @words = Words.all()
   @list_of_words = Words.all()
   erb(:index)
+end
+
+get('/new_word/:id') do
+  @word = Words.find(params.fetch('id').to_i())
 end

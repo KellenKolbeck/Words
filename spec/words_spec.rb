@@ -32,9 +32,19 @@ describe(Words) do
     end
   end
 
+  describe('.find') do
+    it('finds a word based on an id') do
+      test_word_1 = Words.new("mountain")
+      test_word_1.save()
+      test_word_2 = Words.new("hill")
+      test_word_2.save()
+      expect(Words.find(test_word_2.id())).to(eq(test_word_2))
+    end
+  end
+end
+
   # describe('#save_definition') do
   #   it('saves the definition for a word') do
 
   #   end
   # end
-end

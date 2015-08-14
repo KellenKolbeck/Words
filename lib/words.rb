@@ -27,5 +27,12 @@ class Words
     @id
   end
 
-
+  define_singleton_method(:find) do |id|
+    @@word_list.each do |unique_word|
+      if unique_word.id() == id
+      return unique_word
+      end
+    end
+    return nil
+  end
 end

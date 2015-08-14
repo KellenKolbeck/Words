@@ -33,7 +33,16 @@ class Definitions
     @id
   end
 
+  define_method(:unique_word) do
+    "#{@first_definition}"
+  end
 
-
-
+  define_singleton_method(:find) do |id|
+    @@definition_list.each() do |definition|
+      if definition.id == id
+        return definition
+      end
+    end
+    return nil
+  end
 end

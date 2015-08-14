@@ -19,6 +19,10 @@ class Definitions
     @@definition_list.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@definition_list = []
+  end
+
 
 
 

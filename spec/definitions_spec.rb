@@ -29,4 +29,13 @@ describe(Definitions) do
       expect(Definitions.all()).to(eq([test_definition]))
     end
   end
+
+  describe('.clear') do
+    it('clears the definitions out of the array') do
+      test_definition = Definitions.new('A mountain is a large landform that stretches above the surrounding land in a limited area, usually in the form of a peak.')
+      test_definition.save()
+      Definitions.clear()
+      expect(Definitions.all()).to(eq([]))
+    end
+  end
 end

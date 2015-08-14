@@ -3,6 +3,9 @@ require('words')
 require('definitions')
 
 describe(Words) do
+  before() do
+    Words.clear()
+  end
   describe('#word') do
     it('displays the word') do
       test_word = Words.new("mountain")

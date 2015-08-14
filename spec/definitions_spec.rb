@@ -45,7 +45,7 @@ describe(Definitions) do
       test_definition_1.save()
       test_definition_2 = Definitions.new("A hill is a bump of the earth.")
       test_definition_2.save()
-      expect(Words.find(test_definition_2.id())).to(eq(test_definition_2))
+      expect(Definitions.find(test_definition_2.id())).to(eq(test_definition_2))
     end
   end
 end

@@ -2,6 +2,7 @@ class Words
 
   @@word_list = []
 
+
   define_method(:initialize) do |word|
     @word = word
     @word_array = []
@@ -32,8 +33,8 @@ class Words
     @word_array.push(definition)
   end
 
-  define_method(:show_word) do
-    @word_array
+  define_method(:show_word) do |new_word|
+    @word_array.push(word)
   end
 
   define_singleton_method(:find) do |id|

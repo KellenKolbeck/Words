@@ -38,4 +38,14 @@ describe(Definitions) do
       expect(Definitions.all()).to(eq([]))
     end
   end
+
+  describe('.find') do
+    it('finds a definition based on an id') do
+      test_definition_1 = Definitions.new("A mountain is a large landform that stretches above the surrounding land in a limited area, usually in the form of a peak.")
+      test_definition_1.save()
+      test_definition_2 = Definitions.new("A hill is a bump of the earth.")
+      test_definition_2.save()
+      expect(Words.find(test_definition_2.id())).to(eq(test_definition_2))
+    end
+  end
 end

@@ -22,4 +22,14 @@ describe(Words) do
       expect(test_word.save()).to(eq([test_word]))
     end
   end
+
+
+  describe('.clear') do
+    it('clears the words out of the array after each spec run') do
+      test_word = Words.new("mountain")
+      test_word.save()
+      Words.clear()
+      expect(Words.all()).to(eq([]))
+    end
+  end
 end

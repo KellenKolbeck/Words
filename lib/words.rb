@@ -18,6 +18,9 @@ class Words
     @@word_list.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@word_list = []
+  end
 
 
 end
